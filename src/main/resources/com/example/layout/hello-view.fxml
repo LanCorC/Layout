@@ -8,14 +8,22 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.HBox?>
-<HBox alignment="bottom_right" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.layout.HelloController"
-      style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed"
-    spacing="10">
-    <padding>
-        <Insets bottom="10" right="10"/>
-    </padding>
-    <Button text="Okay" prefWidth="90"/>
-    <Button text="Cancel" prefWidth="90"/>
-    <Button text="Help" prefWidth="90"/>
-</HBox>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.layout.HelloController">
+    <top>
+        <Label text="This label is in the top position" alignment="center"
+            style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style:dashed"
+        BorderPane.alignment="CENTER"/>
+    </top>
+    <bottom>
+        <HBox spacing="10" alignment="bottom_right">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+            <Button text="Okay" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
